@@ -28,8 +28,6 @@ async function setEmailList(e){
   } else {
     emailList.innerHTML = `<h3 style="text-align: center;">No Inbox</h3>`;
   }
-
-  getNewEmail();
 }
 let email; 
 
@@ -49,6 +47,7 @@ const getNewEmail = async () => {
   }
   emailInput.value = email;
   newBtn.innerHTML = 'New Email';
+  setEmailList();
 }
 
 window.onload = getNewEmail
